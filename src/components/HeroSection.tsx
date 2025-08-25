@@ -8,7 +8,7 @@ import heroBg from '@/assets/hero-bg.jpg';
 
 export default function HeroSection({ onCatalogClick }: HeroSectionProps) {
   return (
-    <section id="hero" className="relative min-h-[60vh] bg-neutral-900">
+    <section id="hero" className="relative h-screen bg-neutral-900">
       {/* Background image from src/assets with slight blur */}
       <img
         src={heroBg}
@@ -20,7 +20,7 @@ export default function HeroSection({ onCatalogClick }: HeroSectionProps) {
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/60" />
 
       {/* Headline and subtext */}
-      <div className="relative z-10 flex items-center justify-center h-[60vh] px-6">
+      <div className="relative z-10 flex items-center justify-center h-screen px-6">
         <div className="text-center max-w-4xl">
           <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tight drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]">
             Eurodoor — качественные двери для вашего дома и офиса
