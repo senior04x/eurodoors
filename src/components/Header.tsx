@@ -16,7 +16,7 @@ export default function Header({ onSectionClick }: HeaderProps) {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      <div className="backdrop-blur-xl bg-white/20 border-b border-white/20 shadow-lg">
+      <div className="backdrop-blur-2xl bg-black/50 border-b border-white/20 shadow-lg">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div 
@@ -30,19 +30,19 @@ export default function Header({ onSectionClick }: HeaderProps) {
             <nav className="hidden md:flex space-x-8">
               <button 
                 onClick={() => handleNavClick('catalog')}
-                className="text-gray-700 hover:text-gray-900 transition-colors duration-200 backdrop-blur-sm hover:bg-white/10 px-4 py-2 rounded-lg"
+                className="text-white hover:text-white/90 transition-colors duration-200 backdrop-blur-xl bg-black/40 hover:bg-black/50 px-4 py-2 rounded-lg border border-white/20"
               >
                 Каталог
               </button>
               <button 
                 onClick={() => handleNavClick('about')}
-                className="text-gray-700 hover:text-gray-900 transition-colors duration-200 backdrop-blur-sm hover:bg-white/10 px-4 py-2 rounded-lg"
+                className="text-white hover:text-white/90 transition-colors duration-200 backdrop-blur-xl bg-black/40 hover:bg-black/50 px-4 py-2 rounded-lg border border-white/20"
               >
                 О нас
               </button>
               <button 
                 onClick={() => handleNavClick('contact')}
-                className="text-gray-700 hover:text-gray-900 transition-colors duration-200 backdrop-blur-sm hover:bg-white/10 px-4 py-2 rounded-lg"
+                className="text-white hover:text-white/90 transition-colors duration-200 backdrop-blur-xl bg-black/40 hover:bg-black/50 px-4 py-2 rounded-lg border border-white/20"
               >
                 Контакты
               </button>
@@ -50,7 +50,7 @@ export default function Header({ onSectionClick }: HeaderProps) {
 
             {/* Mobile Menu Button */}
             <button 
-              className="md:hidden text-gray-700 hover:text-gray-900 transition-colors duration-200"
+              className="md:hidden text-white hover:text-white/90 transition-colors duration-200"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -61,23 +61,23 @@ export default function Header({ onSectionClick }: HeaderProps) {
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <nav className="md:hidden mt-4 backdrop-blur-xl bg-white/20 rounded-lg p-4 border border-white/20">
+            <nav className="md:hidden mt-4 backdrop-blur-2xl bg-black/50 rounded-lg p-4 border border-white/20">
               <div className="flex flex-col space-y-2">
                 <button 
                   onClick={() => handleNavClick('catalog')}
-                  className="text-gray-700 hover:text-gray-900 transition-colors duration-200 text-left p-2 rounded-lg hover:bg-white/10"
+                  className="text-white hover:text-white/90 transition-colors duration-200 text-left p-2 rounded-lg hover:bg-black/40"
                 >
                   Каталог
                 </button>
                 <button 
                   onClick={() => handleNavClick('about')}
-                  className="text-gray-700 hover:text-gray-900 transition-colors duration-200 text-left p-2 rounded-lg hover:bg-white/10"
+                  className="text-white hover:text-white/90 transition-colors duration-200 text-left p-2 rounded-lg hover:bg-black/40"
                 >
                   О нас
                 </button>
                 <button 
                   onClick={() => handleNavClick('contact')}
-                  className="text-gray-700 hover:text-gray-900 transition-colors duration-200 text-left p-2 rounded-lg hover:bg-white/10"
+                  className="text-white hover:text-white/90 transition-colors duration-200 text-left p-2 rounded-lg hover:bg-black/40"
                 >
                   Контакты
                 </button>
