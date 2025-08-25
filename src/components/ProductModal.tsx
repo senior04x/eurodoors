@@ -1,3 +1,4 @@
+import React from 'react';
 import { Door } from './utils/doorData';
 
 interface ProductModalProps {

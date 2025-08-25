@@ -1,11 +1,12 @@
+import React from 'react';
 import { useState } from 'react';
 import { Door, doorCatalog } from './utils/doorData';
 import ProductModal from './ProductModal';
 
 export default function CatalogSection() {
-  const [selectedDoor, setSelectedDoor] = useState<Door | null>(null);
-  const [hoveredDoor, setHoveredDoor] = useState<string | null>(null);
-  const [filter, setFilter] = useState<'All' | 'MDF' | 'Metal'>('All');
+  const [selectedDoor, setSelectedDoor] = useState(null as Door | null);
+  const [hoveredDoor, setHoveredDoor] = useState(null as string | null);
+  const [filter, setFilter] = useState('All' as 'All' | 'MDF' | 'Metal');
 
   const filteredDoors = filter === 'All' 
     ? doorCatalog 
@@ -59,10 +60,40 @@ export default function CatalogSection() {
             {filteredDoors.map((door) => (
               <div
                 key={door.id}
-                className="group cursor-pointer"
+                className="group cursor-pointer focus:outline-none"
+                tabIndex={0}
                 onMouseEnter={() => setHoveredDoor(door.id)}
                 onMouseLeave={() => setHoveredDoor(null)}
-                onClick={() => handleDoorClick(door)}
+                onFocus={() => setHoveredDoor(door.id)}
+                onBlur={() => setHoveredDoor(null)}
+                onTouchStart={() => {
+                  // show preview on touch
+                  setHoveredDoor(door.id);
+                }}
+                onClick={() => {
+                  // tap-to-toggle: first tap shows preview, second tap opens modal
+                  if (hoveredDoor === door.id) {
+                    handleDoorClick(door);
+                  } else {
+                    setHoveredDoor(door.id);
+                    window.setTimeout(() => {
+                      setHoveredDoor((current) => (current === door.id ? null : current));
+                    }, 1500);
+                  }
+                }}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    if (hoveredDoor === door.id) {
+                      handleDoorClick(door);
+                    } else {
+                      setHoveredDoor(door.id);
+                      window.setTimeout(() => {
+                        setHoveredDoor((current) => (current === door.id ? null : current));
+                      }, 1500);
+                    }
+                  }
+                }}
               >
                 <div className="backdrop-blur-xl bg-white/20 rounded-2xl border border-white/30 shadow-xl overflow-hidden transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl">
                   {/* Image area with cross-fade */}
