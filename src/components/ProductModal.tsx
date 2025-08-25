@@ -98,11 +98,6 @@ export default function ProductModal({ door, isOpen, onClose }: ProductModalProp
                   ))}
                 </ul>
               </div>
-
-              <div className="backdrop-blur-xl bg-white/10 rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl mb-2 text-gray-800">Цена</h3>
-                <p className="text-2xl text-gray-800">{door.price}</p>
-              </div>
             </div>
           </div>
         </div>
