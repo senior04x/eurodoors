@@ -1,4 +1,6 @@
+import React from 'react';
 import { useState } from 'react';
+import logo from '@/assets/logo1.png';
 
 interface HeaderProps {
   onSectionClick: (section: string) => void;
@@ -18,10 +20,10 @@ export default function Header({ onSectionClick }: HeaderProps) {
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div 
-              className="text-2xl font-bold text-gray-800 cursor-pointer"
+              className="cursor-pointer"
               onClick={() => handleNavClick('hero')}
             >
-              Eurodoor
+              <img src={logo} alt="Eurodoor" className="h-8 w-auto" />
             </div>
             
             {/* Desktop Navigation */}

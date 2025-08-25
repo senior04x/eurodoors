@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="40" viewBox="0 0 160 40" fill="none">
+  <rect width="160" height="40" rx="8" fill="#111827"/>
+  <g transform="translate(12,8)">
+    <rect x="0" y="0" width="24" height="24" rx="6" fill="#ffffff" fill-opacity="0.15"/>
+    <path d="M6 17 L12 7 L18 17" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="48" y="26" fill="#FFFFFF" font-size="18" font-family="Inter, Arial, sans-serif" font-weight="700">Eurodoor</text>
+</svg>

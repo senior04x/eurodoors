@@ -1,3 +1,6 @@
+import React from 'react';
+import logo from '@/assets/logo1.png';
+
 export default function Footer() {
   return (
     <footer id="contact" className="py-16 relative">
@@ -10,7 +13,9 @@ export default function Footer() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Company Info */}
               <div className="text-center md:text-left">
-                <h3 className="text-2xl mb-4 text-gray-800">Eurodoor</h3>
+                <div className="mb-4 inline-flex items-center">
+                  <img src={logo} alt="Eurodoor" className="h-8 w-auto" />
+                </div>
                 <p className="text-gray-600 leading-relaxed">
                   Качественные двери из МДФ и металла для вашего дома и офиса в Узбекистане.
                 </p>
