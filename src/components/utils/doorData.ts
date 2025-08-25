@@ -12,7 +12,6 @@ export interface Door {
     thickness: number;
   };
   features: string[];
-  price?: string;
 }
 
 import model1 from '@/assets/model1.jpg';
@@ -38,8 +37,7 @@ export const doorCatalog: Door[] = [
     description: 'Классическая дверь с современным дизайном.',
     material: 'МДФ высокой плотности',
     dimensions: { width: 800, height: 2000, thickness: 40 },
-    features: ['Звукоизоляция', 'Износостойкое покрытие'],
-    price: 'По запросу'
+    features: ['Звукоизоляция', 'Износостойкое покрытие']
   },
   {
     id: 'model-02',
@@ -50,8 +48,7 @@ export const doorCatalog: Door[] = [
     description: 'Прочная металлическая дверь для входной группы.',
     material: 'Сталь с порошковым покрытием',
     dimensions: { width: 860, height: 2050, thickness: 80 },
-    features: ['Термоизоляция', 'Антикоррозийное покрытие'],
-    price: 'По запросу'
+    features: ['Термоизоляция', 'Антикоррозийное покрытие']
   },
   {
     id: 'model-03',
@@ -62,8 +59,7 @@ export const doorCatalog: Door[] = [
     description: 'Дверь из МДФ с лаконичным оформлением.',
     material: 'МДФ с ламинацией',
     dimensions: { width: 900, height: 2100, thickness: 45 },
-    features: ['Лёгкий уход', 'Долговечность'],
-    price: 'По запросу'
+    features: ['Лёгкий уход', 'Долговечность']
   },
   {
     id: 'model-04',
@@ -74,8 +70,7 @@ export const doorCatalog: Door[] = [
     description: 'Надёжная дверь с усиленной рамой.',
     material: 'Оцинкованная сталь',
     dimensions: { width: 900, height: 2100, thickness: 90 },
-    features: ['Усиленная рама', 'Повышенная безопасность'],
-    price: 'По запросу'
+    features: ['Усиленная рама', 'Повышенная безопасность']
   },
   {
     id: 'model-05',
@@ -86,8 +81,7 @@ export const doorCatalog: Door[] = [
     description: 'Элегантная дверь для жилых интерьеров.',
     material: 'МДФ с шпоном',
     dimensions: { width: 800, height: 2000, thickness: 40 },
-    features: ['Эстетичный внешний вид', 'Качественная фурнитура'],
-    price: 'По запросу'
+    features: ['Эстетичный внешний вид', 'Качественная фурнитура']
   },
   {
     id: 'model-06',
@@ -98,8 +92,7 @@ export const doorCatalog: Door[] = [
     description: 'Современная металлическая дверь.',
     material: 'Сталь с декоративными элементами',
     dimensions: { width: 860, height: 2050, thickness: 80 },
-    features: ['Шумоизоляция', 'Противовзломные элементы'],
-    price: 'По запросу'
+    features: ['Шумоизоляция', 'Противовзломные элементы']
   },
   {
     id: 'model-07',
@@ -110,8 +103,7 @@ export const doorCatalog: Door[] = [
     description: 'Минималистичная дверь для современного интерьера.',
     material: 'МДФ с покрытием ПВХ',
     dimensions: { width: 800, height: 2000, thickness: 40 },
-    features: ['Износостойкость', 'Простота ухода'],
-    price: 'По запросу'
+    features: ['Износостойкость', 'Простота ухода']
   },
   {
     id: 'model-08',
@@ -122,8 +114,7 @@ export const doorCatalog: Door[] = [
     description: 'Надёжная металлическая дверь.',
     material: 'Сталь с порошковой окраской',
     dimensions: { width: 900, height: 2100, thickness: 90 },
-    features: ['Теплоизоляция', 'Защита от коррозии'],
-    price: 'По запросу'
+    features: ['Теплоизоляция', 'Защита от коррозии']
   },
   {
     id: 'model-09',
@@ -134,8 +125,7 @@ export const doorCatalog: Door[] = [
     description: 'Дверь с рельефным узором.',
     material: 'МДФ с фрезеровкой',
     dimensions: { width: 800, height: 2000, thickness: 40 },
-    features: ['Рельефная поверхность', 'Стильный дизайн'],
-    price: 'По запросу'
+    features: ['Рельефная поверхность', 'Стильный дизайн']
   },
   {
     id: 'model-10',
@@ -146,8 +136,7 @@ export const doorCatalog: Door[] = [
     description: 'Металлическая дверь повышенной прочности.',
     material: 'Высокопрочная сталь',
     dimensions: { width: 860, height: 2050, thickness: 100 },
-    features: ['Прочность', 'Безопасность'],
-    price: 'По запросу'
+    features: ['Прочность', 'Безопасность']
   },
   {
     id: 'model-11',
@@ -158,7 +147,6 @@ export const doorCatalog: Door[] = [
     description: 'Современная МДФ дверь с лаконичным стилем.',
     material: 'МДФ с ламинированным покрытием',
     dimensions: { width: 900, height: 2100, thickness: 45 },
-    features: ['Звукоизоляция', 'Долговечность'],
-    price: 'По запросу'
+    features: ['Звукоизоляция', 'Долговечность']
   }
 ];
