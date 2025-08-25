@@ -4,12 +4,14 @@ interface HeroSectionProps {
   onCatalogClick: () => void;
 }
 
+import heroBg from '@/assets/hero-bg.jpg';
+
 export default function HeroSection({ onCatalogClick }: HeroSectionProps) {
   return (
     <section id="hero" className="relative min-h-[60vh] bg-neutral-900">
-      {/* Background image from public with slight blur (place at public/images/hero-bg.jpg) */}
+      {/* Background image from src/assets with slight blur */}
       <img
-        src="/assets/hero-bg.jpg"
+        src={heroBg}
         alt="Hero"
         className="absolute inset-0 w-full h-full object-cover blur-sm"
       />
