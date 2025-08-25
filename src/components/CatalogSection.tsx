@@ -65,17 +65,21 @@ export default function CatalogSection() {
                 onClick={() => handleDoorClick(door)}
               >
                 <div className="backdrop-blur-xl bg-white/20 rounded-2xl border border-white/30 shadow-xl overflow-hidden transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl">
-                  {/* Image */}
+                  {/* Image area with cross-fade */}
                   <div className="relative h-80 overflow-hidden">
                     <img
-                      src={hoveredDoor === door.id ? door.technicalDrawing : door.image}
+                      src={door.image}
                       alt={door.name}
-                      className="w-full h-full object-cover transition-all duration-500"
+                      className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-out ${hoveredDoor === door.id ? 'opacity-0' : 'opacity-100'}`}
                     />
-                    
+                    <img
+                      src={door.technicalDrawing}
+                      alt={`${door.name} чертёж`}
+                      className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-out ${hoveredDoor === door.id ? 'opacity-100' : 'opacity-0'}`}
+                    />
                     {/* Overlay on hover */}
-                    <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    
+                    <div className={`absolute inset-0 bg-black/20 transition-opacity duration-300 ${hoveredDoor === door.id ? 'opacity-100' : 'opacity-0'}`} />
+
                     {/* Type badge */}
                     <div className="absolute top-4 left-4 backdrop-blur-xl bg-white/30 rounded-full px-3 py-1 border border-white/40">
                       <span className="text-sm text-gray-800">
@@ -89,8 +93,7 @@ export default function CatalogSection() {
                     <h3 className="text-2xl mb-2 text-gray-800">{door.name}</h3>
                     <p className="text-gray-600 mb-4 line-clamp-2">{door.description}</p>
                     
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-700">{door.price}</span>
+                    <div className="flex items-center justify-end">
                       <button className="backdrop-blur-xl bg-white/30 hover:bg-white/40 text-gray-800 px-4 py-2 rounded-xl border border-white/40 transition-all duration-200 group-hover:scale-110">
                         Подробнее
                       </button>
